@@ -10,5 +10,5 @@
 
 - name: copy index.html
   copy:
-    src: site.html
+    src: cep.html
     dest: /var/www/html
