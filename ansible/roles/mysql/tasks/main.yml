@@ -1,0 +1,5 @@
+---
+- name: Install mysql-server # apt install default-mysql-server
+  apt:
+    name: default-mysql-server
+    state: present

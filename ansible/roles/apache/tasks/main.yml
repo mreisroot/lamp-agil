@@ -1,0 +1,14 @@
+---
+- name: Update Cache # apt update
+  apt:
+    update_cache: yes
+
+- name: Install apache # apt install apache
+  apt:
+    name: apache2
+    state: present
+
+- name: copy index.html
+  copy:
+    src: site.html
+    dest: /var/www/html
