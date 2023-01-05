@@ -1,4 +1,4 @@
-# Servidor LAMP criado com Vagrant+Ansible
+# Servidor LAMP Ágil
 
 Neste projeto, há a criação de um servidor web virtualizado baseado no stack de tecnologias **LAMP** (Linux, Apache, MySQL, PHP) usando as ferramentas **Vagrant** e **Ansible**.
 
