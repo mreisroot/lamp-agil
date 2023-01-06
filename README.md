@@ -12,6 +12,6 @@ Para criar o servidor, execute em um host (máquina física):
 
 O comando acima irá criar o servidor seguindo as instruções do arquivo Vagrantfile. E nesse mesmo arquivo, haverá o acionamento do Ansible, instalando o Apache, MySQL e PHP.
 
-Para acessar a aplicação, digite na barra de navegação do navegador:
+Para acessar a aplicação, digite na barra de pesquisa de um navegador:
 
 `<ip_do_servidor>/site.php`
