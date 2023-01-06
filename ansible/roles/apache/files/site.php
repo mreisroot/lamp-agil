@@ -1,9 +1,9 @@
 <html>
  <head>
-  <title>Curso PHP Progressivo</title>
+  <title>Calculadora PHP</title>
  </head>
  <body>
-   <form   action="home.php" method="get">
+   <form   action="site.php" method="get">
 
  Numero 1: <input type="text" name="num1"><br>
  Numero 2: <input type="text" name="num2"><br>
