@@ -1,22 +1,28 @@
 Vagrant.configure("2") do |config|
 
-  # Definindo o provider, nome do servidor e alocação de recursos
-  config.vm.provider "virtualbox" do |vb|
-    vb.name = "servidor-lamp"
-    vb.cpus = 2
-    vb.memory = "2048"
+  # Definir o provider
+  config.vm.provider "virtualbox" do |v|
+    v.name = "servidor_lamp"
+    v.cpus = 1
+    v.memory = 1024
+    v.gui = false
   end
 
-  # Definindo o SO, rede e pasta compartilhada com os roles do Ansible
+  # Definir hostname, SO e rede
+  config.vm.hostname = "webserver"
   config.vm.box = "debian/bullseye64"
-  config.vm.network "public_network"
+  config.vm.network "private_network", ip: "192.168.56.11"
+
+  # Compartilhar a pasta que contém as roles do ansible
   config.vm.synced_folder "./ansible", "/ansible"
 
-  # Automação com o Ansible
-  config.vm.provision "shell", inline: <<-SHELL
-    sudo apt update
-    sudo apt install -y ansible
-    ansible-playbook --connection=local /ansible/playbook.yml
-  SHELL
+  # Instalar o ansible
+  config.vm.provision "shell", path: "provision.sh"
+
+  # Provisionar a VM
+  config.vm.provision "ansible_local" do |ansible|
+    ansible.provisioning_path = "/ansible"
+    ansible.playbook = "playbook.yml"
+  end
 
 end
