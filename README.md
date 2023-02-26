@@ -14,4 +14,4 @@ O comando acima irá criar o servidor seguindo as instruções do arquivo Vagran
 
 Para acessar a aplicação, digite na barra de pesquisa de um navegador o seguinte endereço:
 
-`<ip_do_servidor>/site.php`
+`192.168.56.11/site.php`
