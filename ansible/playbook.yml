@@ -1,4 +1,4 @@
-- hosts: localhost
+- hosts: default
   become: true
   roles:
     - apache
