@@ -8,7 +8,7 @@
     name: apache2
     state: present
 
-- name: copy site.php
+- name: copy index.php
   copy:
-    src: site.php
+    src: .
     dest: /var/www/html
